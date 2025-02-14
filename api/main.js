@@ -338,13 +338,13 @@ function get_sign(data) {
     return sign
 }
 
-module.exports = { get_sign };
+// module.exports = { get_sign };
 
 module.exports = (req, res) => {
   const { data } = req.query; // 从请求中获取传递的 `data`
 
   if (!data) {
-    return res.status(400).json({ error: 'Missing data parameter' });
+    return res.status(400).json({ error: '缺少data' });
   }
 
   try {
